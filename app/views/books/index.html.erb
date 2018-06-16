@@ -1,5 +1,6 @@
+<% @book = Book.new unless @book %>
 <h1 class = "Books">
-  <strong>Books</strong>
+ <strong>Books</strong>
 </h1>
 
   <table>
@@ -33,10 +34,6 @@
 <h2>
   <strong>New book</strong>
 </h2>
-
-
-
-
 
 <%= form_for(@book) do |f| %>
 
