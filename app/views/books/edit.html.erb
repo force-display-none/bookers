@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title, class: "book_titlle" %>
+    <%= f.text_field :title, class: "book_title" %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
@@ -26,4 +26,4 @@
 
 <% end %>
 <br>
-<%= link_to "Show ", book_path(@book) %>|<%= link_to " Back", books_path() %>
+<%= link_to "Show ", book_path(@book), class: "show_#{@book.id}" %>|<%= link_to " Back", books_path(), class: "back"  %>

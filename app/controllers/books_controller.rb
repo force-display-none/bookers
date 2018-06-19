@@ -6,11 +6,9 @@ class BooksController < ApplicationController
   def index
   	  @books = Book.all.order(created_at: :ASC)
       @book = Book.new
-
   end
 
   def new
-  	  @book = Book.new
   end
 
   def create

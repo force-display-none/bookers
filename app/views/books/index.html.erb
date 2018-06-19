@@ -22,9 +22,9 @@
            <%= book.body %>
            </td>
            <td>
-           <%= link_to "Show", book_path(book) %>
-           <%= link_to "Edit", edit_book_path(book) %>
-           <%= link_to "Destroy", destroy_book_path(book), method: :delete, "data-confirm" => "Are you sure?" %>
+           <%= link_to "Show", book_path(book), class: "show_#{book.id}" %>
+           <%= link_to "Edit", edit_book_path(book), class: "edit_#{book.id}" %>
+           <%= link_to "Destroy", destroy_book_path(book), class: "destroy_#{book.id}", method: :delete, "data-confirm" => "Are you sure?" %>
            </td>
            </tr>
      <% end %>
@@ -49,7 +49,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title, class: "book_titlle" %>
+    <%= f.text_field :title, class: "book_title" %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
